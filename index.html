@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <script>
         // Function to extract the token from the URL
@@ -7,7 +8,7 @@
             const urlParams = new URLSearchParams(window.location.search);
             return urlParams.get("token");
         }
-​
+
         // Function to perform the redirect
         function redirectToApp() {
             const token = getTokenFromUrl();
@@ -19,12 +20,15 @@
                 alert("Token not found in the URL.");
             }
         }
-​
+
         // Automatically call the redirect function when the page loads
         window.onload = redirectToApp;
     </script>
 </head>
+
 <body>
+    <div>hi</div>
     <!-- You can add some content here if needed -->
 </body>
+
 </html>
