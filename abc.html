@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // Function to extract the token from the URL
+        function getTokenFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get("token");
+        }
+​
+        // Function to perform the redirect
+        function redirectToApp() {
+            const token = getTokenFromUrl();
+            if (token) {
+                // Redirect to the app with the token
+                window.location.href = `app://tastepass?token=${token}`;
+            } else {
+                // Handle the case where the token is not present in the URL
+                alert("Token not found in the URL.");
+            }
+        }
+​
+        // Automatically call the redirect function when the page loads
+        window.onload = redirectToApp;
+    </script>
+</head>
+<body>
+    <!-- You can add some content here if needed -->
+</body>
+</html>
